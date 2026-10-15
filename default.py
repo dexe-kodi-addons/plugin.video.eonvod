@@ -1274,6 +1274,7 @@ class EonApi:
             ("refreshtoken", "refresh_token"),
             ("streamkey", "stream_key"),
             ("streamuser", "stream_un"),
+            ("devicenumber", "device_number"),
         ):
             value = data.get(field) or ""
             if value:
@@ -1284,6 +1285,8 @@ class EonApi:
                     self.settings.stream_key = value
                 elif field == "stream_un":
                     self.settings.stream_user = value
+                elif field == "device_number":
+                    self.settings.device_number = value
 
         log("Access token refreshed by the VOD plugin")
 

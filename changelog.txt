@@ -1,3 +1,6 @@
+v1.2.1
+- Persist deviceNumber from the token exchange (v2/devices providers, e.g. Vivacom); no change for others
+
 v1.2.0
 - Provider resolution follows pvr.eon's rebuilt provider list, and keeps
   reading older pvr.eon installs by their original index meanings.
