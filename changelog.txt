@@ -1,3 +1,11 @@
+v1.2.2
+- Fixed: nothing loaded on Windows systems with unreadable certificates in the Windows certificate store (sync and catalogue now work)
+- Fixed: faster browsing - the catalogue code is now bytecode-cached instead of recompiled on every folder
+- Added: DRM-protected titles now check for Widevine before playback and offer to install it via InputStream Helper instead of failing silently
+- Added: a clear message when EON refuses a DRM licence for a title (previously a generic playback error)
+- Added: Account information now shows whether the Widevine CDM is installed
+- Improved: error log now records the server's reason when a stream is refused, for easier support
+
 v1.2.1
 - Persist deviceNumber from the token exchange (v2/devices providers, e.g. Vivacom); no change for others
 

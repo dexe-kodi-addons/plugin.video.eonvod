@@ -70,6 +70,8 @@ def write_json(path, payload):
         handle.close()
         handle = None
 
+        if xbmc.getCondVisibility("System.Platform.Windows") and xbmcvfs.exists(path):
+            xbmcvfs.delete(path)
         if not xbmcvfs.rename(temporary, path):
             if xbmcvfs.exists(path):
                 xbmcvfs.delete(path)
